@@ -1,0 +1,30 @@
+// tsconfig.app.json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    // ✅ allow `import saveAs from "file-saver"`
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // ✅ allow `@/components/...` imports
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    // (optional but nice for Vite typings)
+    "types": ["vite/client"]
+  },
+  "include": ["src"]
+}
